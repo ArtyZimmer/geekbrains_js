@@ -1,7 +1,7 @@
 function userHistory(val, userAnswers) {
     const step = userAnswers[val - 1];
     let newStep;
-    if(step) {
+    if (step) {
         newStep = prompt(
             'Вопрос:' + "\n" +
             `${step.question}${"\n"}` +
@@ -14,16 +14,16 @@ function userHistory(val, userAnswers) {
             `Такого шага нет. Всего шагов: ${userAnswers.length}.`
         );
     }
-    if(newStep === null) {
-        alert("Всего доброго!")
+    if (newStep === null) {
+        alert("Всего доброго!");
     } else {
         userHistory(+newStep, userAnswers);
     }
 }
 
 function game(val, userAnswers) {
-    if(val === null) {
-        if(userAnswers.length === 0) {
+    if (val === null) {
+        if (userAnswers.length === 0) {
             alert("Очень жаль, что Вы покинули нас так рано");
             return;
         }
@@ -40,13 +40,13 @@ function game(val, userAnswers) {
         section.question + "\n" +
         section.answers.map((a, index) => `${index + 1} - ${a.answer}`).join('')
     );
-    if(userValue === null) {
+    if (userValue === null) {
         game(null, []);
         return;
     }
     const userAnswer = section.answers[+userValue - 1];
-    if(userAnswer) {
-        userAnswers.push({ question: section.question, userAnswer })
+    if (userAnswer) {
+        userAnswers.push({question: section.question, userAnswer})
         game(userAnswer.goTo, userAnswer.goTo === 1 ? [] : userAnswers);
     } else {
         alert('Введено недопустимое значение');
