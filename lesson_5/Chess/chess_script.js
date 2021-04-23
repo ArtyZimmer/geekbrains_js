@@ -1,0 +1,3 @@
+function createChessTable (rows, cals) {
+
+}
