@@ -1,0 +1,58 @@
+.chess-table {
+    width: 540px;
+    background-color: #e1c6ab;
+}
+
+.chess-table > div {
+    display: flex;
+    height: 60px;
+}
+.chess-table > div:first-child, .chess-table > div:last-child {
+    height: 30px;
+    font-weight: bold;
+    color: #380f0d;
+}
+
+.chess-table > div:first-child > div:not(:first-child):not(:last-child) {
+    transform: rotate(180deg);
+    border-top: 1px #380f0d solid;
+}
+
+.chess-table > div:last-child > div:not(:first-child):not(:last-child) {
+    border-top: 1px #380f0d solid;
+}
+
+.chess-table > div > div:last-child {
+    transform: rotate(180deg);
+    width: 30px;
+    flex: none;
+    font-weight: bold;
+    color: #380f0d;
+}
+
+.chess-table > div:not(:first-child):not(:last-child) > div:last-child,
+.chess-table > div:not(:first-child):not(:last-child) > div:first-child {
+    border-right: 1px #380f0d solid;
+}
+
+.chess-table > div > div:first-child {
+    width: 30px;
+    flex: none;
+    font-weight: bold;
+    color: #380f0d;
+}
+
+.chess-table > div > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chess-table > div:nth-child(2n):not(:last-child) > div:nth-child(2n-1):not(:first-child) {
+    background-color: #380f0d;
+}
+
+.chess-table > div:nth-child(2n - 1):not(:first-child) > div:nth-child(2n):not(:last-child) {
+    background-color: #380f0d;
+}
