@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игровой магазин "Консолька" - Каталог товаров</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap"
+            rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1 id="title">Игровой магазин "Консолька"</h1>
+    <hr>
+</header>
+<div class="content">
+    <div class="catalog">
+        <div class="item">
+            <div class="item-img">
+                <img src="img/dbd.jpg" alt="dbd">
+            </div>
+            <div class="item-title">Dead by Daylight</div>
+            <div class="item-price">2290&#8381;</div>
+            <div class="div-buy-button">
+                <button class="buy-button" onclick="addToCart(this)">В корзину</button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="img/lis.jpg" alt="lis">
+            </div>
+            <div class="item-title">Life is Strange</div>
+            <div class="item-price">1195&#8381;</div>
+            <div class="div-buy-button">
+                <button class="buy-button" onclick="addToCart(this)">В корзину</button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-img">
+                <img src="img/sims4.jpg" alt="sims4">
+            </div>
+            <div class="item-title">Sims 4</div>
+            <div class="item-price">4860&#8381;</div>
+            <div class="div-buy-button">
+                <button class="buy-button" onclick="addToCart(this)">В корзину</button>
+            </div>
+        </div>
+    </div>
+    <div class="shop-basket shop-basket--hidden">
+        <div class="basket-list"></div>
+        <div class="basket-sum"></div>
+        <div class="basket-buy-button">
+            <button>Перейти к оплате</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
